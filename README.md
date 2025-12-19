@@ -41,7 +41,7 @@ S = U Σ V^T
 ## Cara Menggunakan
 
 ### 1. Record Audio
-Rekam data training untuk setiap perintah (minimal 10 samples per kelas):
+Rekam data training untuk setiap perintah (default 20 sampel, tetapi dapat diubah sesuai keinginan):
 ```bash
 python record/rec_audio.py
 ```
