@@ -80,21 +80,3 @@ Recording → Normalisasi → Feature Extraction → Classification
 1.5s audio   RMS ~0.07    SVD (30) + MFCC (13)   SVM Model
 16kHz mono                    43 features        4 classes
 ```
-
-## Detail
-
-### Feature Extraction
-1. **Mel-Spectrogram:** Audio → frequency domain (64 mel bands)
-2. **SVD:** Ekstraksi 30 singular values terbesar
-3. **MFCC:** Mean dari 13 koefisien untuk timbre karakteristik
-4. **Total:** 43 fitur per audio sample
-
-### Model
-- **Classifier:** SVM dengan RBF kernel
-- **Input:** 43-dimensional feature vector
-- **Output:** Probabilitas 4 kelas + label prediksi
-
-### Dataset
-- **Training:** 20 sampel per kelas (up, down, left, right)
-- **Format:** WAV, 16kHz mono, 1.5 detik
-- **Preprocessing:** Normalisasi audio ke RMS ~0.07
