@@ -20,11 +20,11 @@ def record_dataset(label, count=10):
         sd.wait()
 
         audio_int16 = np.int16(audio * 32767)
-        filename = label_dir / f"{label}_{i+11}.wav"
+        filename = label_dir / f"{label}_{i+1}.wav"
         write(filename, SAMPLE_RATE, audio_int16)
 
         print(f"Disimpan ke {filename}\n")
 
 if __name__ == "__main__":
     label = input("Label perintah (up, down, left, right): ").strip().lower()
-    record_dataset(label, count=10)
+    record_dataset(label, count=20)
